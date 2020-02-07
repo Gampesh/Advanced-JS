@@ -27,3 +27,27 @@ function computeArea(radius) {
 }
 
 console.log("Area is " + computeArea(3));
+
+
+class Animal { 
+    constructor (id, name) {
+        this._ald = id;
+        this._aName = name;
+    }
+    toString () {
+        return "Animal > "+ this._ald +" Name "+ this._aName;
+    }
+ } 
+class Dog extends Animal {
+    constructor (id, name, weight, breed = "Poodle") {
+     super(id, name);
+     this._dWeight = weight;
+     this._dBreed = breed;
+    }
+     toString () {
+        return "Dog > " + super.toString() +" Breed "+ this._dBreed+" Weight " +this._dWeight;
+    }
+ }
+ var dog = new Animal();
+dog = new Dog(100, "Duke", "15k");
+console.log(dog.toString());

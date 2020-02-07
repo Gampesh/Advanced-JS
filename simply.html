@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script type="module" src ="https://unpkg.com/aapp-chat@1.0.3/dist/one-comp.js"></script>
+</head>
+<body >
+<one-comp></one-comp>
+<br />
+<b>Warning</b>:  Unknown: php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in <b>Unknown</b> on line <b>0</b><br />
+[Sun Aug  4 13:37:09 2019] Failed to listen on localhost:8000 (reason: php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known)
+<p>Click DIV1 Element</p>
+<div onclick="secondFunc()">DIV 2
+    <div onclick="firstFunc(event)">DIV 1</div>
+</div>
+
+<script>
+    function firstFunc(event) {
+        alert("DIV 1");
+        event.stopPropagation();
+    }
+
+    function secondFunc() {
+        alert("DIV 2");
+    }
+</script>
+</body>
+</html>
+
